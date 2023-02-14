@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="MyPropertyIsWorth | Appraisal - Curious to know what your property is worth? Free online appraisal. Simply click here and fill out the form to get started.">
+    <meta name="keywords" content="MyPropertyIsWorth mypropertyisworth free online appraisal property worth form">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../files/favicon.ico" alt="MyPropertyIsWorth Icon">
+    <title>Appraisal - MyPropertyIsWorth</title>
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/appraisal.css">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <a href="./landing-page.html"><img src="../files/head.png" alt="MyPropertyIsWorth Logo" id="logo"></a>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu horizontal nav">
+          <li><a href="./landing-page.html" id="home">HOME</a></li>
+          <li><a href="./appraisal.html" id="appraisal">APPRAISAL</a></li>
+          <li><a href="./faq.html" id="faq">FAQ</a></li>
+          <li><a href="./contact.html" id="contact">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 id="form-header">Simply Fill Out The Form Below!</h1>
+
+    <span id="message"></span>
+    <div id="dataform-display" class="">
+      <form name="dataform" id="dataform" action="" method="post">
+
+        <div id="data-progress">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+  
+        <!-- Code input -->
+        <div class="tab" id="tab1">
+          <label class="form-heading">Do you have a code?</label>
+          <div class="code-div">
+            <input type="radio" name="show-code" value="Yes" class="necessary radio code-yes" onclick="codeTransition1()"></input>
+            <label class="form-question" for="show-codeYes">Yes</label>
+            <input type="radio" name="show-code" value="No" class="necessary radio code-no" onclick="codeTransition2()"/></input>
+            <label class="form-question" for="show-codeNo">No</label>
+          </div>
+          <div id="codeYes" class="code-section">
+            <label class="form-question-bold">Enter Code</label>
+            <input type="text" name="code" class="input" placeholder="e.g. WK2918" id="code-confirm">
+            <div class="invalid-input hidden" id="necessary1">
+              <img class="arrow" src="./files/uparrow1.png">
+              <p>Please fill out this field</p>
+              <img class="alert" src="./files/alert1.png">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Personal Details -->
+        <div class="tab" id="tab2">
+          <label class="form-heading">Owners Details</label>
+        
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">First Name
+                  <input type="text" name="fname" class="necessary input" id="fname" placeholder="Enter first name here...">
+                  <div class="invalid-input visible" id="necessary2">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Last Name
+                  <input type="text" name="lname" class="necessary input" id="lname" placeholder="Enter last name here...">
+                  <div class="invalid-input visible" id="necessary3">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Email
+                  <input type="text" name="email" class="necessary input" id="email" placeholder="Enter email here...">
+                  <div class="invalid-input visible" id="necessary4">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Mobile Phone
+                  <input type="text" name="mobile" class="necessary input" id="mobile" placeholder="Enter mobile phone here...">
+                  <div class="invalid-input visible" id="necessary5">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Google API Address -->
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-12 cell">
+                <label class="form-question">Enter address here...
+                  <input type="text" name="ship-address" id="ship-address" class="google-api necessary input" autocomplete="off" placeholder="Start typing address here..." required>
+                  <div class="invalid-input visible" id="necessary6">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Unit Number
+                  <input type="text" id="address2" name="address2" id="address2" class="input" placeholder="Enter address here...">
+                  <div class="invalid-input hidden">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Suburb
+                  <input type="text" name="state" id="state" class="necessary input" placeholder="Enter suburb here...">
+                  <div class="invalid-input visible" id="necessary7">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Town/City
+                  <input type="text" id="locality" name="locality" class="necessary input" placeholder="Enter town/city here...">
+                  <div class="invalid-input visible" id="necessary8">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Postcode
+                  <input type="text" name="postcode" id="postcode" class="necessary input" placeholder="Enter postcode here...">
+                  <div class="invalid-input visible" id="necessary9">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="row align-center">
+              <div class="medium-6 cell">
+                <label  class="form-question">Is the property owner occupied or tenanted?
+                  <select name="ownertenanted" class="necessary input" id="necessaryquestion10">
+                    <option value="">Select Option...</option>
+                    <option value="property_1">Owner Occupied</option>
+                    <option value="property_2">Tenanted</option>
+                    <option value="property_3">Vacant</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary10">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Property Features -->
+        <div class="tab" id="tab3">
+          <label class="form-heading">Property Features</label>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-12 cell">
+                <label class="form-question">What is the condition of the property?
+                  <select name="propertycondition" id="propertycondition" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="condition_1">Run down and needs work</option>
+                    <option value="condition_2">Average but neat and tidy</option>
+                    <option value="condition_3">Good/clean/fresh, but a little dated</option>
+                    <option value="condition_4">Very good, renovated, but mostly new</option>
+                    <option value="condition_5">Excellent, brand new, or fully renovated</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary11">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Sea Views
+                  <input name="seaviews" id="seaviews" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">City Views
+                  <input name="cityviews" id="cityviews" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Rural Views
+                  <input name="ruralviews" id="ruralviews" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Landscaped Gardens
+                  <input name="landscapedgardens" id="landscapedgardens" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Indoor Fire
+                  <input name="indoorfire" id="indoorfire" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Outdoor Fire
+                  <input name="outdoorfire" id="outdoorfire" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Alarm
+                  <input name="alarm" id="alarm" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Heat Pump / Air Con
+                  <input name="heatpump" id="heatpump" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Heat Recovery System
+                  <input name="heatrecoverysys" id="heatrecoverysys" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Tennis Court
+                  <input name="tenniscourt" id="tenniscourt" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Swimming Pool
+                  <input name="swimmingpool" id="swimmingpool" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Spa Pool
+                  <input name="spapool" id="spapool" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">Sauna
+                  <input name="sauna" id="sauna" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+              <div class="medium-6 cell checkbox">
+                <label class="form-question special">BBQ Area
+                  <input name="bbqarea" id="bbqarea" value="0" class="input checkbox-input" type="checkbox">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Property Details -->
+        <div class="tab" id="tab4">
+          <label class="form-heading">Property Details</label>
+          
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Bedrooms
+                  <select name="bedrooms" id="bedrooms" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="bedroom_1">1</option>
+                    <option value="bedroom_2">2</option>
+                    <option value="bedroom_3">3</option>
+                    <option value="bedroom_4">4</option>
+                    <option value="bedroom_5">5</option>
+                    <option value="bedroom_6">6</option>
+                    <option value="bedroom_7">7</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary12">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Bathrooms
+                  <select name="bathrooms" id="bathrooms" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="bathrooms_1">1</option>
+                    <option value="bathrooms_2">2</option>
+                    <option value="bathrooms_3">3</option>
+                    <option value="bathrooms_4">4</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary13">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Seperate Toilets
+                  <select name="seperatetoilets" id="seperatetoilets" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="toilets_1">1</option>
+                    <option value="toilets_2">2</option>
+                    <option value="toilets_3">3</option>
+                    <option value="toilets_4">4</option>
+                    <option value="toilets_5">5</option>
+                    <option value="toilets_6">6</option>
+                    <option value="toilets_7">7</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary14">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Parking
+                  <select name="parking" id="parking" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="parking_none">None</option>
+                    <option value="parking_1">Off Street Only</option>
+                    <option value="parking_2">Single Carport</option>
+                    <option value="parking_3">Double Carport</option>
+                    <option value="parking_4">Single Garage</option>
+                    <option value="parking_5">Double Garage</option>
+                    <option value="parking_6">More</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary15">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Property Type
+                  <select name="propertytype" id="propertytype" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="property-type_1">Freestanding House</option>
+                    <option value="property-type_2">Semi Detached House</option>
+                    <option value="property-type_3">Apartment/Unit</option>
+                    <option value="property-type_4">Terrace Townhouse</option>
+                    <option value="property-type_5">Duplex</option>
+                    <option value="property-type_6">Rural/Farm</option>
+                    <option value="property-type_7">Land Only</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary16">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Number of Levels
+                  <select name="numberoflevels" id="numberoflevels" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="levels_1">1</option>
+                    <option value="levels_2">2</option>
+                    <option value="levels_3">3</option>
+                    <option value="levels_4">4</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary17">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Age of Property
+                  <select name="ageofproperty" id="ageofproperty" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="property-age_1">After 2020</option>
+                    <option value="property-age_2">2010's</option>
+                    <option value="property-age_3">2000's</option>
+                    <option value="property-age_4">1990's</option>
+                    <option value="property-age_5">1980's</option>
+                    <option value="property-age_6">1970's</option>
+                    <option value="property-age_7">1960's</option>
+                    <option value="property-age_8">1950's</option>
+                    <option value="property-age_9">1940's</option>
+                    <option value="property-age_10">1930's</option>
+                    <option value="property-age_11">1920's and earlier</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary18">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Size of Section
+                  <select name="sizeofsection" id="sizeofsection" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="section-size_1">200 - 400m2</option>
+                    <option value="section-size_2">400 - 600m2</option>
+                    <option value="section-size_3">600 - 800m2</option>
+                    <option value="section-size_4">800 - 1000m2</option>
+                    <option value="section-size_5">1/4 acre</option>
+                    <option value="section-size_6">1/2 acre</option>
+                    <option value="section-size_7">1 acre</option>
+                    <option value="section-size_8">2 - 5 acres</option>
+                    <option value="section-size_9">5 - 10 acres</option>
+                    <option value="section-size_10">10 - 20 acres</option>
+                    <option value="section-size_11">20 - 50 acres</option>
+                    <option value="section-size_12">50+ acres</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary19">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label class="form-question">Estimated Value
+                  <select name="estimatedvalue" id="estimatedvalue" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="value_1">$50,000 to $100,000</option>
+                    <option value="value_2">$100,000 to $140,000</option>
+                    <option value="value_3">$140,000 to $180,000</option>
+                    <option value="value_4">$180,000 to $220,000</option>
+                    <option value="value_5">$220,000 to $260,000</option>
+                    <option value="value_6">$260,000 to $300,000</option>
+                    <option value="value_7">$300,000 to $340,000</option>
+                    <option value="value_8">$340,000 to $380,000</option>
+                    <option value="value_9">$380,000 to $420,000</option>
+                    <option value="value_19">$420,000 to $460,000</option>
+                    <option value="value_11">$460,000 to $500,000</option>
+                    <option value="value_12">$500,000 to $540,000</option>
+                    <option value="value_13">$540,000 to $580,000</option>
+                    <option value="value_14">$580,000 to $620,000</option>
+                    <option value="value_15">$620,000 to $660,000</option>
+                    <option value="value_16">$660,000 to $700,000</option>
+                    <option value="value_17">$700,000 to $800,000</option>
+                    <option value="value_18">$800,000 to $900,000</option>
+                    <option value="value_19">$900,000 to $1,000,000</option>
+                    <option value="value_20">$1,000,000 to $1,250,000</option>
+                    <option value="value_21">$1,250,000 to $1,500,000</option>
+                    <option value="value_22">$1,500,000 to $1,750,000</option>
+                    <option value="value_23">$1,750,000 to $2,000,000</option>
+                    <option value="value_24">$2,000,000 plus</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary20">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label class="form-question">Time Frame to Sell
+                  <select name="selltimeframe" id="selltimeframe" class="necessary input">
+                    <option value="">Select Option...</option>
+                    <option value="time-frame_1">0 - 3 months</option>
+                    <option value="time-frame_2">3 - 6 months</option>
+                    <option value="time-frame_3">6 months to a year</option>
+                    <option value="time-frame_4">1 - 3 years</option>
+                    <option value="time-frame_5">3 - 5 years</option>
+                  </select>
+                  <div class="invalid-input visible" id="necessary21">
+                    <img class="arrow" src="./files/uparrow1.png">
+                    <p>Please fill out this field</p>
+                    <img class="alert" src="./files/alert1.png">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="form-nav">
+          <button type="button" id="prevBtn" class="button hollow primary" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" class="button hollow primary" onclick="nextPrev(1)">Next</button>
+        </div>
+      </form>
+    </div>
+    
+    <div id="result">
+      <h1>Thank you for taking the time to contact us.</h1><br>
+      <h1>Your submission has been received and we will get back to you as soon as possible.</h1>
+    </div>
+
+    <footer>
+      <div id="footer-container">
+        <div class="box" id="footer-box1">
+          <p>© MyPropertyIsWorth Limited</p>
+        </div>
+    
+        <div class="box" id="footer-box2">
+          <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100089957265702" target="_blank"><img src="../files/facebook.png" alt="MyPropertyIsWorth Facebook Icon"></a></li>
+            <li><a href="https://www.linkedin.com/in/mypropertyisworth/" target="_blank"><img src="../files/linkedin.png" alt="MyPropertyIsWorth LinkedIn Icon"></a></li>
+            <li><a href="./contact.html"><img src="../files/email.png" alt="MyPropertyIsWorth Email Icon"></a></li>
+          </ul>
+        </div>
+  
+        <div class="box" id="footer-box3">
+          <ul>
+            <li><a href="./privacy-policy.html"><p>Privacy Policy</p></a></li>
+            <li><a href="./terms-of-use.html"><p>Terms Of Use</p></a></li>
+          </ul>
+      </div>
+    </div>
+
+    <a href="https://www.wknight0.com" target="_blank" id="wknight0"><p>Designed & Built by William Knight</p></a>  
+    </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/appraisal.js"></script>
+    <script src="js/vendor/google-api.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=WITHHELD defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  </body>
+</html>

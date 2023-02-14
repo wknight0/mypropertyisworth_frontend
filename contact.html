@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="MyPropertyIsWorth | Contact - To contact us, please use the following form. The information you provide helps us to respond to your enquiry and prevents spam from clogging our support queues.">
+    <meta name="keywords" content="MyPropertyIsWorth mypropertyisworth free online appraisal property worth form contact">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../files/favicon.ico">
+    <title>Contact - MyPropertyIsWorth</title>
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <a href="./landing-page.html"><img src="../files/head.png" alt="MyPropertyIsWorth Logo" id="logo"></a>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu horizontal nav">
+          <li><a href="./landing-page.html" id="home">HOME</a></li>
+          <li><a href="./appraisal.html" id="appraisal">APPRAISAL</a></li>
+          <li><a href="./faq.html" id="faq">FAQ</a></li>
+          <li><a href="./contact.html" id="contact">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Us</h2>
+
+      <div class="contact-box" id="contact-box">
+        <div class="contact-item" id="contact-item1">
+          <p>
+            To contact us, please use the following form.
+            The information you provide helps us to respond to your enquiry and prevents spam from clogging our support queues.
+          </p>
+        </div>
+        <div class="contact-item" id="contact-item2">
+          <span id="message"></span>
+          <form name="contactForm" id="contactForm" method="post" action="contact.php" class="form">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label>Your Name
+                    <input type="text" placeholder="Enter name..." class="input" name="name" id="name" required>
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>Your Email
+                    <input type="text" placeholder="Enter email..." class="input" name="email" id="email" required>
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                  <label>Subject
+                    <input type="text" placeholder="Enter subject..." class="input" name="subject" id="subject" required>
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                  <label>Your Message
+                    <textarea placeholder="Enter message..." rows="5" class="input" name="message" id="message" required></textarea>
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                  <input type="submit" name="Submit" id="Submit" class="button" value="Submit" onclick="submit_data()"; return false;>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="result">
+      <h1>Thank you for taking the time to contact us.</h1><br>
+      <h1>Your submission has been received and we will get back to you as soon as possible.</h1>
+    </div>
+
+    <footer>
+      <div id="footer-container">
+        <div class="box" id="footer-box1">
+          <p>© MyPropertyIsWorth Limited</p>
+        </div>
+    
+        <div class="box" id="footer-box2">
+          <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100089957265702" target="_blank"><img src="../files/facebook.png" alt="MyPropertyIsWorth Facebook Icon"></a></li>
+            <li><a href="https://www.linkedin.com/in/mypropertyisworth/" target="_blank"><img src="../files/linkedin.png" alt="MyPropertyIsWorth LinkedIn Icon"></a></li>
+            <li><a href="./contact.html"><img src="../files/email.png" alt="MyPropertyIsWorth Email Icon"></a></li>
+          </ul>
+        </div>
+  
+        <div class="box" id="footer-box3">
+          <ul>
+            <li><a href="./privacy-policy.html"><p>Privacy Policy</p></a></li>
+            <li><a href="./terms-of-use.html"><p>Terms Of Use</p></a></li>
+          </ul>
+      </div>
+    </div>
+
+    <a href="https://www.wknight0.com" target="_blank" id="wknight0"><p>Designed & Built by William Knight</p></a>  
+    </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
+
+  </body>
+</html>

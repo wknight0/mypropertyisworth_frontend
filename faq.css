@@ -1,0 +1,205 @@
+html
+{
+    font-family: "Cabin";
+    background-color: #fdb705;
+}
+
+.top-bar
+{
+    background-color: white;
+}
+
+.top-bar-left
+{
+    margin-left: 3%;
+}
+
+.top-bar-right
+{
+    margin-right: 3%;
+    padding-left: 2%;
+}
+
+ul.menu.horizontal.nav
+{
+    background-color: white;
+    flex-wrap: nowrap;
+}
+
+.nav li
+{
+    font-family: "Cabin", sans-serif;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+
+.nav li a
+{
+    color: #606060;
+    transition: color, 0.5s;
+}
+
+.nav li:hover a, .nav li:active a
+{
+    color: white;
+    transition: color, 0.5s;
+    background-color: #009787;
+    transition: background-color, 0.5s;
+    text-decoration: underline;
+    transition: text-decoration, 0.5s;
+}
+
+#faq
+{
+    color: white;
+    background-color: #009787;
+}
+
+h2
+{
+    font-family: "Cabin", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    background-color: #009787;
+    color: white;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.accordion
+{
+    margin-top: -10px;
+    margin-bottom: 0;
+    border-left: 75px solid #009787;
+    border-bottom: 75px solid #009787;
+    border-right: 75px solid #009787;
+    font-family: "Cabin", sans-serif;
+    font-size: 18px;
+}
+
+.accordion-title
+{
+    font-size: 20px;
+    font-weight: 700;
+    color: #009787;
+}
+
+.accordion-item:hover
+{
+    border: 3px solid #009787;
+}
+
+.accordion-title:hover
+{
+    background-color: #fdb705;
+    color: white;
+}
+
+.accordion-content
+{
+    color: white;
+    font-weight: 400;
+    padding-bottom: 0px;
+    background-color: rgba(255, 183, 5, 1);
+    border: 5px solid #009787;
+}
+
+@media only screen and (max-width: 1100px)
+{
+    ul.menu.horizontal.nav
+    {
+        padding-top: 10px;
+        justify-content: center;
+        scale: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px)
+{
+    div.top-bar-left
+    {
+        width: 60%;
+    }
+
+    ul.menu.horizontal.nav
+    {
+        scale: 75%;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    h2
+    {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 639px)
+{
+    ul.menu.horizontal.nav
+    {
+        padding-top: 10px;
+        justify-content: center;
+        scale: 65%;
+    }
+
+    div.top-bar-left
+    {
+        padding: 0 0;
+        text-align: center;
+    }
+
+    div.top-bar-left img#logo
+    {
+        width: 85%;
+    }
+
+    .accordion
+    {
+        border-left: 30px solid #009787;
+        border-bottom: 30px solid #009787;
+        border-right: 30px solid #009787;
+    }
+
+    .top-bar-left
+    {
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    .top-bar-right
+    {
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    h2
+    {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    h2
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 325px)
+{
+    div.top-bar-right a
+    {
+        font-size: 10px;
+    }
+
+    h2
+    {
+        font-size: 20px;
+    }
+}
